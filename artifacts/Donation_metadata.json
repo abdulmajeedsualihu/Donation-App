@@ -11,6 +11,115 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "donor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "DonationReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "FundsWithdrawn",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MINIMUM_USD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "donations",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -22,6 +131,17 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -52,11 +172,19 @@
 	},
 	"sources": {
 		"Donation.sol": {
-			"keccak256": "0x29f9edf394ba7530a29bc4404a72c23767a3459cd63fe2a53b91d5e7db47b12c",
+			"keccak256": "0xdeb7fa1ba220af14a5f87bca4a295668084d029401c7892d1f0078ef74342f1e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://689fb741259a3eed9026307020a228d8bd2bd063970e259722d381ea1ac20d73",
-				"dweb:/ipfs/QmcfrKQNxMxZjueeegsfdda9G2PWkYmH5mYQhVrmB1wL9U"
+				"bzz-raw://7127e256d82bad03318242a050279e999124d583ec57ca68e9703e07aa7f4c9c",
+				"dweb:/ipfs/QmWNhsi9WaWYiHe9bNRQbvayNanQduRZ1evpMcmPWLydT6"
+			]
+		},
+		"PriceConverter.sol": {
+			"keccak256": "0xca7ffc10dda33c08b0f8161bbbb244bedd900e18b3ea99d7661081c56557e6c3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a48f0141bde36dd5c0d1674a0e3db888b94aa177b83d99419f4021d177c0ff2",
+				"dweb:/ipfs/QmNacrrQyoPvrEyS8hn8nUDd7LDwddQwUCV3soNiXrWDpT"
 			]
 		}
 	},
